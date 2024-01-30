@@ -13,7 +13,7 @@ const Home = ({children}) => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 min-h-full bg-gray-950 text-white border-r-2 border-amber-500 text-xl pt-20">
+                    <ul className="menu p-4 w-full min-h-full bg-gray-950 text-white border-r-2 border-amber-500 text-xl pt-20">
                         {/* Sidebar content here */}
                         <li><Link to="/create-task">Create Task</Link></li>
                         <li><Link to="/">View Task</Link></li>

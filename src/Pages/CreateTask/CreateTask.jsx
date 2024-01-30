@@ -65,30 +65,30 @@ const CreateTask = () => {
     return (
         <div>
             <Home>
-                <Title></Title>
-                <div className="card shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
+                <Title>Create Task</Title>
+                <div className="card shrink-0 w-full max-w-sm lg:max-w-lg shadow-2xl bg-base-100">
                     <form onSubmit={handleSubmit} className="card-body bg-[#040813] rounded shadow shadow-amber-500">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white text-lg">Title</span>
+                                <span className="label-text text-white text-base">Title</span>
                             </label>
                             <input name="title" type="text" placeholder="Title" className="input input-bordered text-gray-950" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white text-lg">Description</span>
+                                <span className="label-text text-white text-base">Description</span>
                             </label>
                             <textarea name="description" className="textarea textarea-bordered text-gray-950" placeholder="Description"></textarea>
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white text-lg">Due Date</span>
+                                <span className="label-text text-white text-base">Due Date</span>
                             </label>
                             <input name="date" type="date" className="input input-bordered text-gray-950" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white text-lg">Due Date</span>
+                                <span className="label-text text-white text-base">Due Date</span>
                             </label>
                             <select className="select select-bordered text-gray-950" name="select">
                                 <option disabled selected>Select</option>

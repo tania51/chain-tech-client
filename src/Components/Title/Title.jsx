@@ -1,9 +1,9 @@
 
 
-const Title = () => {
+const Title = ({children}) => {
     return (
-        <div className="text-xl lg:text-5xl font-bold text-white mb-10">
-            Create Task
+        <div className="text-xl lg:text-3xl font-bold text-white my-10">
+            {children}
         </div>
     );
 };

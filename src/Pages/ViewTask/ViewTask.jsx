@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Home from "../Home/Home";
 import { Bounce, ToastContainer, toast } from "react-toastify";
+import Title from "../../Components/Title/Title";
 
 
 const ViewTask = () => {
@@ -123,12 +124,13 @@ const ViewTask = () => {
     return (
         <div>
             <Home>
+                <Title>View All Task</Title>
                 <div>
-                    <div className="overflow-x-auto">
+                    <div className="overflow-x-auto w-full px-24">
                         <table className="table">
                             {/* head */}
                             <thead>
-                                <tr className="text-white text-2xl">
+                                <tr className="text-white text-lg">
                                     <th></th>
                                     <th>Title</th>
                                     <th>Description</th>
@@ -139,13 +141,13 @@ const ViewTask = () => {
                             </thead>
                             <tbody>
                                 {
-                                    allTask && allTask.map((singleTask, index) => <tr key={singleTask?._id}>
-                                        <th>{index + 1}</th>
+                                    allTask && allTask.map((singleTask, index) => <tr key={singleTask?._id} className="text-sm">
+                                        <td>{index + 1}</td>
                                         <td>{singleTask?.title}</td>
                                         <td>{singleTask?.description}</td>
                                         <td>{singleTask?.date}</td>
                                         <td>{singleTask?.select}</td>
-                                        <td className="space-x-2">
+                                        <td className="space-x-2 space-y-2">
                                             {/* incomplete btn */}
                                             <button onClick={() => handleIncomplete(singleTask?._id)} className={
                                                 (singleTask.incomplete === 'Incomplete') ?
@@ -154,7 +156,7 @@ const ViewTask = () => {
                                             {/* edit btn */}
                                             {/* edit modal starts */}
                                             {/* Open the modal using document.getElementById('ID').showModal() method */}
-                                            <button className="btn btn-active btn-accent px-7" onClick={() => document.getElementById('my_modal_5').showModal()}><span onClick={() => handleEdit(singleTask?._id)} >Edit</span></button>
+                                            <button className="btn btn-active btn-accent px-8" onClick={() => document.getElementById('my_modal_5').showModal()}><span onClick={() => handleEdit(singleTask?._id)} >Edit</span></button>
 
                                             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                                                 <div className="modal-box bg-[#040813]">
@@ -209,7 +211,7 @@ const ViewTask = () => {
 
 
                                             {/* delete btn */}
-                                            <button onClick={() => handleDelete(singleTask?._id)} className="btn btn-active bg-[#a60001] text-white hover:bg-[#a60000ee] border-none">Delete</button>
+                                            <button onClick={() => handleDelete(singleTask?._id)} className="btn btn-active bg-[#a60001] text-white hover:bg-[#a60000ee] border-none px-7">Delete</button>
                                         </td>
                                     </tr>)
                                 }
